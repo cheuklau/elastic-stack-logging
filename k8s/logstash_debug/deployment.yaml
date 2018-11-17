@@ -1,0 +1,28 @@
+# Note: To debug
+# 1) kubectl describe pods logstash
+# 2) Copy docker container ID from step 1 (it should be docker://<container-ID>)
+# 3) docker exec -it <container-ID> bash
+# 4) vi logstash.conf to change the configuration file
+# 5) logstash-6.5.0/bin/logstash -f logstash.conf
+# 6) Configuration file is set up to display to stdout, so use that to debug
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: logstash
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        name: logstash
+    spec:
+      containers:
+      - env:
+        #- name: ES_JAVA_OPTS
+        #  value: -Xms256m -Xms256m
+        name: logstash
+        image: cheuklau/logstash_debug:latest
+        ports:
+        - containerPort: 5044
