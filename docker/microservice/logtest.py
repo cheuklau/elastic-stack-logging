@@ -101,7 +101,7 @@ def logger(log_dir, wait_time, per_warn, per_err):
 if __name__ == '__main__':
 
     # Log directory
-    log_dir = 'logtest'
+    log_dir = '/logtest'
 
     # Wait time between logs (seconds)
     wait_time = int(os.environ['WAIT_TIME'])

@@ -1,4 +1,4 @@
-# Official Python Debian image
+# Official Python image
 FROM python:3
 
 # Copy Python script to image
