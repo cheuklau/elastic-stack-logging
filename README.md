@@ -27,6 +27,9 @@ This repository will test the Elastic Stack for centralized logging. The compone
 5. Kibana
     + Visualizes the data from Elasticsearch
     + Open `localhost:30000` in any browser to view Kibana UI
+    + Go to `Timelion` tab and enter `.es(index="elk-info*").label(INFO), .es(index="elk-warn*").label(WARN), .es(index="elk-error-*").label(ERROR)`
+
+![Fig 1: Kibana UI showing rate of log messages by status](/images/logmessages.png)
 
 ## Build Instructions
 
