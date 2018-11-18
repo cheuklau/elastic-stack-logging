@@ -41,11 +41,11 @@ kubectl create -f service.yaml
 ```
 
 This will create a Kubernetes cluster with the following:
-    + Pod running microservice and Filebeat containers sharing a mounted volume where the logs are written
-    + Pod running Logstash reading in the data from Filebeat on Port 5044
-    + Pod running Elasticsearch reading in the data from Logstash on Port 9200
-    + Pod running Kibana reading in the data from Elasticsearch
-    + Kibana service is exposed on Port 30000
+* Pod running microservice and Filebeat containers sharing a mounted volume where the logs are written
+* Pod running Logstash reading in the data from Filebeat on Port 5044
+* Pod running Elasticsearch reading in the data from Logstash on Port 9200
+* Pod running Kibana reading in the data from Elasticsearch
+* Kibana service is exposed on Port 30000
 
 ## Debug Instructions
 
